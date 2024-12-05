@@ -11,6 +11,7 @@ public class Plants {
 
     private final SpriteBatch batch;
     private final ArrayList<Texture> plantTextures;
+    private final Texture plant;
     private float xCoord1, xMax;
 
     public Plants() {
@@ -19,7 +20,7 @@ public class Plants {
         for(int i = 0; i < 4; i++) {
             plantTextures.add(new Texture("plants/plant"+ i +".png"));
         }
-
+        plant = new Texture("plants/39.png");
         xMax = Gdx.graphics.getWidth();
         xCoord1 = xMax;
     }
@@ -35,7 +36,7 @@ public class Plants {
             frame = ran.nextInt(plantTextures.size());
         }
         batch.begin();
-        batch.draw(plantTextures.get(frame), xCoord1, 285);
+        batch.draw(plant, xCoord1, 285);
         batch.end();
     }
 

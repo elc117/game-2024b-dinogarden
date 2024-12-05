@@ -12,16 +12,18 @@ public class DinoAnimation  {
     private Animation<TextureRegion> dinoAnimation;
     private TextureRegion[] runFrames;
     private SpriteBatch batch;
-    private float time, yMax, yMin;
-    private boolean jumping;
+    private float time, yMax, yMin, y;
+    private boolean jumping, ascending, descending;
 
     public DinoAnimation() {
         batch = new SpriteBatch();
         time = 0f;
         runFrames = new TextureRegion[8];
         yMin = 60f;
+        y = yMin;
         yMax = 260f;
         jumping = false;
+        ascending = false;
     }
 
     public void display() {
@@ -37,28 +39,44 @@ public class DinoAnimation  {
         // Get current frame of animation for the current stateTime
         TextureRegion currentFrame = dinoAnimation.getKeyFrame(time, true);
         batch.begin();
-        if(isJumping()) {
-                jump();
-        } else {
-            batch.draw(currentFrame, 50, 60); // Draw current frame at (50, 50)
+        if(Gdx.input.justTouched()) {
+            jumping = true;
+            ascending = true;
         }
+        if(jumping) {
+            currentFrame = dinoAnimation.getKeyFrame(time, false);
+                if(ascending) {
+                    ascend();
+                }
+                 else {
+                    descend();
+                }
+        }
+
+        batch.draw(currentFrame, 50, y); // Draw current frame at (50, 50)
 
         batch.end();
     }
-    public boolean isJumping() {
-        return Gdx.input.justTouched();
-    }
-
-    public void jump() {
-        TextureRegion currentFrame = dinoAnimation.getKeyFrame(time, false);
-        float y = yMin+1;
-        float delta = 200 * Gdx.graphics.getDeltaTime();
-        while (y < yMax) {
-            y += delta;
+    public void ascend() {
+        if(y >= yMax) {
+            ascending = false;
+            descending = true;
+        } else {
+            y += 600 * Gdx.graphics.getDeltaTime();
         }
-
-        batch.draw(currentFrame, 50, y);
     }
+
+    public void descend() {
+        if(y <= yMin) {
+            descending = false;
+            jumping = false;
+            y = yMin;
+        } else {
+            y -= 600 * Gdx.graphics.getDeltaTime();
+        }
+    }
+
+
 
     public void dispose() {
         batch.dispose();
