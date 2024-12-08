@@ -26,14 +26,16 @@ public class DinoGarden extends ApplicationAdapter {
         quiz = false;
     }
 
-
     @Override
     public void render() {
         ScreenUtils.clear(0.15f, 0.15f, 0.2f, 1f);
 
-        backgroundScreen.display();
+        backgroundScreen.display(this);
         dinoAnimation.display();
-        plants.display();
+        plants.display(this);
+        if (dinoAnimation.catchPlant(plants)) {
+            quiz = true;
+        }
     }
 
     @Override

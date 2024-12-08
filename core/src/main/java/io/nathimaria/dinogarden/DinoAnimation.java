@@ -5,7 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
-
+import com.badlogic.gdx.math.Rectangle;
 
 public class DinoAnimation  {
 
@@ -13,7 +13,8 @@ public class DinoAnimation  {
     private TextureRegion[] runFrames;
     private SpriteBatch batch;
     private float time, yMax, yMin, y;
-    private boolean jumping, ascending, descending;
+    private boolean jumping, ascending;
+    private Rectangle dinoRectangle;
 
     public DinoAnimation() {
         batch = new SpriteBatch();
@@ -24,8 +25,10 @@ public class DinoAnimation  {
         yMax = 260f;
         jumping = false;
         ascending = false;
+        dinoRectangle = new Rectangle();
     }
 
+    // FAÇO O DISPLAY RECEBER O OBJETO JOGO PRA PEGAR O ESTADO DO QUIZ (??)
     public void display() {
 
         for (int i = 0; i <= 7; i++) {
@@ -53,14 +56,14 @@ public class DinoAnimation  {
                 }
         }
 
+        dinoRectangle.set(50, y, 200, 139);
         batch.draw(currentFrame, 50, y); // Draw current frame at (50, 50)
-
         batch.end();
     }
     public void ascend() {
         if(y >= yMax) {
             ascending = false;
-            descending = true;
+            //descending = true;
         } else {
             y += 600 * Gdx.graphics.getDeltaTime();
         }
@@ -68,7 +71,7 @@ public class DinoAnimation  {
 
     public void descend() {
         if(y <= yMin) {
-            descending = false;
+            //descending = false;
             jumping = false;
             y = yMin;
         } else {
@@ -76,7 +79,13 @@ public class DinoAnimation  {
         }
     }
 
+    public boolean catchPlant(Plants plant) {
+        return dinoRectangle.overlaps(plant.getPlantRectangle());
+    }
 
+    public Rectangle getDinoRectangle() {
+        return dinoRectangle;
+    }
 
     public void dispose() {
         batch.dispose();
