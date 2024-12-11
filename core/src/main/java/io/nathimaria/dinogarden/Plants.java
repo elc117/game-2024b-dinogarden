@@ -15,6 +15,7 @@ public class Plants {
     private final Texture plant;
     private float xCoord1, xMax;
     private final Rectangle plantRectangle;
+    private int frame;
 
     public Plants() {
         batch = new SpriteBatch();
@@ -28,6 +29,7 @@ public class Plants {
         xMax = Gdx.graphics.getWidth();
         xCoord1 = xMax;
         plantRectangle = new Rectangle();
+        frame = 0;
     }
 
     public Rectangle getPlantRectangle() {
@@ -36,7 +38,6 @@ public class Plants {
 
     public void display(DinoGarden game) {
         Random ran = new Random();
-        int frame = 0;
         int moveSpeed = 190;
         xCoord1 -= moveSpeed * Gdx.graphics.getDeltaTime();
         // We move the background, not the camera
@@ -46,7 +47,9 @@ public class Plants {
         }
         batch.begin();
         plantRectangle.set(xCoord1, 285, 70, 64);
-        batch.draw(plant, xCoord1, 285);
+        if(!game.isQuiz()) {
+            batch.draw(plantTextures.get(frame), xCoord1, 285);
+        }
         batch.end();
     }
 

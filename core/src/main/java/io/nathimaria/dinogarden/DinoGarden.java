@@ -9,6 +9,7 @@ public class DinoGarden extends ApplicationAdapter {
     private DinoAnimation dinoAnimation;
     private Plants plants;
     private boolean quiz;
+    private int score;
 
     public boolean isQuiz() {
         return quiz;
@@ -31,7 +32,7 @@ public class DinoGarden extends ApplicationAdapter {
         ScreenUtils.clear(0.15f, 0.15f, 0.2f, 1f);
 
         backgroundScreen.display(this);
-        dinoAnimation.display();
+        dinoAnimation.display(this);
         plants.display(this);
         if (dinoAnimation.catchPlant(plants)) {
             quiz = true;

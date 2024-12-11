@@ -28,15 +28,15 @@ public class DinoAnimation  {
         dinoRectangle = new Rectangle();
     }
 
+
     // FAÇO O DISPLAY RECEBER O OBJETO JOGO PRA PEGAR O ESTADO DO QUIZ (??)
-    public void display() {
+    public void display(DinoGarden game) {
 
         for (int i = 0; i <= 7; i++) {
             runFrames[i] = new TextureRegion(new Texture("dino/Run" + i + ".png"));
         }
 
         dinoAnimation = new Animation(0.1f, runFrames);
-        //Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT); // Clear screen
         time += Gdx.graphics.getDeltaTime(); // Accumulate elapsed animation time
 
         // Get current frame of animation for the current stateTime
@@ -48,10 +48,11 @@ public class DinoAnimation  {
         }
         if(jumping) {
             currentFrame = dinoAnimation.getKeyFrame(time, false);
-                if(ascending) {
+                if(game.isQuiz()) {
+                    y = y;
+                } else if (ascending) {
                     ascend();
-                }
-                 else {
+                } else {
                     descend();
                 }
         }

@@ -10,7 +10,6 @@ public class BackgroundScreen {
     private final Texture image1, image2;
     private float xMax, xCoord1, xCoord2;
     private final int BACKGROUND_MOVE_SPEED = 200;
-    private Sprite backSprite, backSprite2;
 
     public BackgroundScreen() {
         batch = new SpriteBatch();
@@ -19,8 +18,6 @@ public class BackgroundScreen {
         xMax = Gdx.graphics.getWidth();
         xCoord1 = xMax;
         xCoord2 = 0;
-        backSprite = new Sprite(image1);
-        backSprite2 = new Sprite(image2);
     }
 
     public void display(DinoGarden game) {
@@ -37,9 +34,8 @@ public class BackgroundScreen {
             xCoord2 = 0;
         }
         batch.begin();
-        batch.draw(backSprite, xCoord1, 0);
-        batch.draw(backSprite2, xCoord2, 0);
-        // COMO FAZ DISPOSE?
+        batch.draw(image1, xCoord1, 0);
+        batch.draw(image2, xCoord2, 0);
         batch.end();
 
     }
