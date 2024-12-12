@@ -37,9 +37,6 @@ public class BackgroundScreen {
         batch.draw(image1, xCoord1, 0);
         batch.draw(image2, xCoord2, 0);
         batch.end();
-
     }
-
 }
 
-// TENTAR USAR SPRITE?

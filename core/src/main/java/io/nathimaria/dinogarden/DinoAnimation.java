@@ -42,11 +42,11 @@ public class DinoAnimation  {
         // Get current frame of animation for the current stateTime
         TextureRegion currentFrame = dinoAnimation.getKeyFrame(time, true);
         batch.begin();
-        if(Gdx.input.justTouched()) {
+        if (Gdx.input.justTouched()) {
             jumping = true;
             ascending = true;
         }
-        if(jumping) {
+        if (jumping) {
             currentFrame = dinoAnimation.getKeyFrame(time, false);
                 if(game.isQuiz()) {
                     y = y;
@@ -62,7 +62,7 @@ public class DinoAnimation  {
         batch.end();
     }
     public void ascend() {
-        if(y >= yMax) {
+        if (y >= yMax) {
             ascending = false;
             //descending = true;
         } else {
@@ -71,7 +71,7 @@ public class DinoAnimation  {
     }
 
     public void descend() {
-        if(y <= yMin) {
+        if (y <= yMin) {
             //descending = false;
             jumping = false;
             y = yMin;

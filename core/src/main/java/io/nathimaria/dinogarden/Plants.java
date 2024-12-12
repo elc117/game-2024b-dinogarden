@@ -21,8 +21,6 @@ public class Plants {
         batch = new SpriteBatch();
         plantTextures = new ArrayList<>();
         for (int i = 0; i < 4; i++) {
-            // era pra ser várias plantas, mas não funcionou muito bem até agora
-            // fazer Sprites como o jogo do balde
             plantTextures.add(new Texture("plants/plant" + i + ".png"));
         }
         plant = new Texture("plants/39.png");
@@ -47,7 +45,7 @@ public class Plants {
         }
         batch.begin();
         plantRectangle.set(xCoord1, 285, 70, 64);
-        if(!game.isQuiz()) {
+        if (!game.isQuiz()) {
             batch.draw(plantTextures.get(frame), xCoord1, 285);
         }
         batch.end();
