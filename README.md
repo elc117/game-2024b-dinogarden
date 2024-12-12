@@ -42,18 +42,22 @@ Para rodar o jogo você precisa clonar este respositório, navegar até a raíz 
 #### :small_blue_diamond: O desenvolvimento foi separado nas integrantes do grupo em:
 
 #### :green_circle: Desenvolvimento da Lógica Principal
-  Construção da lógica principal, imagens de fundo, personagens e gráficos no geral baseados na documentação da LIBGDX.
+  Foram utilizados tutoriais para a animação do fundo (https://www.youtube.com/watch?v=UyNm3n1WNAA) e da movimentação do dinossauro (https://libgdx.com/wiki/graphics/2d/2d-animation).
+  As imagens foram obtidas em sites de distribuição gratuita (dinossauro e plantas: https://opengameart.org/content/free-dino-sprites; e plano de fundo: https://wallpapercave.com/2d-games-wallpapers).
+  O desenvolvimento da lógica principal seguiu uma abordagem bottom-up: precisamos de um fundo, precisamos de um personagem, precisamos de uma ação, e assim sucessivamente. 
+  Isso acarretou na falta de tempo para refatorar as classes, gerando redundâncias e classes que poderiam ter sido generalizadas e herdadas.
 
-#### :green_circle: Desenvolvimento do QUIZZ
+#### :green_circle: Desenvolvimento do QUIZ
 
-   O quizz foi baseado na reutilização do código quizGame de MinAntak disponível no GitHub em https://github.com/MinAntak/quizGame.
+   O quiz foi baseado na reutilização do código quizGame de MinAntak disponível no GitHub em https://github.com/MinAntak/quizGame.
 Para reutilizar foram feitas adaptações da versão da LIBGDX e do Java para executar nas versões atuais, mudança no arquivo de perguntas, mudança nos assets para utilizar as imagens das plantas e adaptações como línguagem, dimensão, etc.
+  As imagens do quiz foram captadas *in loco* durante uma visita ao Jardim Botânico.
 
 
 
 ### :x: ERROS TÉCNICOS
 
-Problemas principalmente na integração do jogo, da parte do Quizz e do Jogo principal, problemas de utilização da LIBGDX.
+Problemas principalmente na integração do jogo, entre o Quiz e o Jogo principal. Demora para compreender a diferença entre classes da LIBGDX e o funcionamento da lógica geral.
 
 
 ###  :white_check_mark: ACERTOS E APRENDIZADO
