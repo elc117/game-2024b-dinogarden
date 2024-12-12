@@ -59,6 +59,8 @@ Para reutilizar foram feitas adaptações da versão da LIBGDX e do Java para ex
 
 Problemas principalmente na integração do jogo, entre o Quiz e o Jogo principal. Demora para compreender a diferença entre classes da LIBGDX e o funcionamento da lógica geral.
 
+![Nosso dino pulando e indo com Deus](https://github.com/elc117/game-2024b-dinogarden/blob/main/DIAGRAMA/dino.gif)
+
 
 ###  :white_check_mark: ACERTOS E APRENDIZADO
 
