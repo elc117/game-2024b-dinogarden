@@ -38,7 +38,8 @@ Para rodar o jogo você precisa clonar este respositório, navegar até a raíz 
 
 #### :small_blue_diamond: O desenvolvimento foi separado nas integrantes do grupo em:
 
-#### :green_circle: Desenvolvimento do ...
+#### :green_circle: Desenvolvimento da Lógica Principal
+  Construção da lógica principal, imagens de fundo, personagens e gráficos no geral baseados na documentação da LIBGDX.
 
 #### :green_circle: Desenvolvimento do QUIZZ
 
@@ -49,15 +50,37 @@ Para reutilizar foram feitas adaptações da versão da LIBGDX e do Java para ex
 
 ### :x: ERROS TÉCNICOS
 
+Problemas principalmente na integração do jogo, da parte do Quizz e do Jogo principal, problemas de utilização da LIBGDX.
 
 
 ###  :white_check_mark: ACERTOS E APRENDIZADO
 
+O trabalho desenvolvido foi de grande valia para as intregrantes pois possibilitou aprimorar diversos aspectos como a Orientação a Objetos, utilização de um Framework, a própria linguagem de programação, desenvolvimento em conjunto, reutilização de código (leitura e interpretação).
+
 
 ### :small_blue_diamond: CONSIDERAÇÕES FINAIS
 
+O jogo não está funcionando como o esperado pois tivemos problemas de integração visto que foram desenvolvidas as partes paralelamente, além da pouca familiaridade com o Framework. Porém podemos citar diversos pontos positivos e resolução de problemas como tratamento dos problemas com imagem, contadores, etc. 
+
+A disciplina nos ofereceu uma oportunidade de trabalho em equipe em desenvolvimento, mostrando-se preparatória para mercado de trabalho, além da utilização de códigos de terceiros que exigem leitura e compreensão.
+
+Nossos agradeciementos a professora pelo semestre, pelos aprendizados e oportunidades, pelos colegas, pelas apresentações.
+
+
 
 ### :small_blue_diamond: REFERÊNCIAS
+
+- Imagens das plantas de autoria própria;
+
+- Utilização do ChatGPT para auxílio na interpretação de código e busca por erros e solução de versão;
+
+- [Documentação da LIBGDX](https://libgdx.com/dev/)
+
+- [Quizz de MinAntak](https://github.com/MinAntak/quizGame)
+
+- [Material da disciplina](https://github.com/AndreaInfUFSM/elc117-2024b)
+
+- [Material sobre dinossauros em Santa Maria](https://diariosm.com.br/noticias/geral/regiao_de_santa_maria_entra_para_o_guinness_como_o_berco_dos_dinossauros_mais_antigos_do_mundo.455469)
 
 
 
