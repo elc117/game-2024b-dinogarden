@@ -28,6 +28,9 @@ Para rodar o jogo você precisa clonar este respositório, navegar até a raíz 
 #### Após isso é só jogar e se divertir 💚
 
 
+### DIAGRAMA DE CLASSES:
+![DIAGRAMA](DIAGRAMA/diagrama.png)
+
 
 #### Configurações técnicas:
 - openjdk version "17.0.13" 2024-10-15
