@@ -85,7 +85,7 @@ Nossos agradeciementos a professora pelo semestre, pelos aprendizados e oportuni
 
 - [Material sobre dinossauros em Santa Maria](https://diariosm.com.br/noticias/geral/regiao_de_santa_maria_entra_para_o_guinness_como_o_berco_dos_dinossauros_mais_antigos_do_mundo.455469)
 
-
+- Diagrama gerado no PlantUML
 
 
 
